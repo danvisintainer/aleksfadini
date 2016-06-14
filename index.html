@@ -2,26 +2,24 @@
 layout: index
 ---
 
-    <div class="page-content">
-      <div class="wrapper">
-        <div class="home">
 
-          <h1 class="page-heading">Posts</h1>
-
-          <ul class="post-list">
-            {% for post in site.posts %}
-              <li>
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-                <h2>
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                </h2>
-              </li>
-            {% endfor %}
-          </ul>
-
-          <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-        </div>
-      </div>
+  <div class="row feature first">
+    <div class="image">
+      <img src="assets/images/darkandstormysmallw.jpg" alt="">
     </div>
+    <div class="excerpt">
+      <h2>Alessandro Fadini "A Dark And Stormy Day"<br>
+      New Record Available!</h2>
+      <p>Aleks debut record features original compositions written for acoustic quartet. The album is now available for purchase directly at <a href="http://www.freshsoundrecords.com/alessandro-fadini/6444-a-dark-and-stormy-day.html"> Freshsound New Talent </a> Website or in selected shops in Europe, US and Japan </p>
+    </div>
+  </div>
+  <div class="row feature second">
+    <div class="image">
+      <img src="assets/images/lookoflovew.jpg" alt="">
+    </div>
+    <div class="excerpt">
+      <h2>"The Look Of Love"<br>
+       Fadini Markham Collusion / Electronic Duo</h2>
+      <p>Watch the video of the vocoder/drums duo interpretation of <a href="https://www.youtube.com/watch?v=slv736zAHWs">The Look Of Love</a>. Featuring Aleks Fadini on laptop/vocoder, Luke Markham on drums. Part of the aPPLEbYTES series.</p>
+    </div>
+  </div>

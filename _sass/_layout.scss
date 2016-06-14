@@ -252,21 +252,55 @@
     background-size: cover;
 
     .title-holder {
-        width: 100%;
+        width: 75%;
         position: absolute;
         top: 50%;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
         transform: translateY(-50%);
         text-transform: uppercase;
         color: #FFF;
         text-align: center;
         letter-spacing: 0.75em;
 
-        .title {
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-            border-top: solid 5px white;
-            border-bottom: solid 5px white;
+        #title {
+            padding: 10px 0;
+            
+            h1 {
+                font-weight: bold;
+            }
+
+            &::before,
+            &::after {
+                box-sizing: border-box;
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+            }
+
+            &::before {
+                border-top: 5px solid transparent;
+                top: 0;
+                left: 0;
+            }
+
+            &::after {
+                border-bottom: 5px solid transparent;
+                bottom: 0;
+                right: 0;
+            }
+
+            &.border-drawn::before,
+            &.border-drawn::after {
+                width: 100%;
+                height: 100%;
+                border-top-color: #FFF;
+                border-bottom-color: #FFF;
+                transition: width 0.75s ease-out; // Width expands first
+            }
             
             h1 {
                 margin-bottom: 0;
@@ -308,6 +342,11 @@
 }
 
 .my-menu {
+    a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
     transition: background .25s ease;
 
     &.hidden {
@@ -319,72 +358,178 @@
     }
 
     background: rgba(200, 200, 200, 0.75);
-    z-index: 10;
+    z-index: 15;
     position: fixed;
     height: 40px;
     width: 100vw;
+    text-transform: uppercase;
 
-        .title-on-menu {
+    .title-on-menu {
         left: 1.25em;
         position: absolute;
-        text-transform: uppercase;
-        color: #FFF;
         letter-spacing: 0.2em;
 
-            h1 a {
-                display: block;
-                color: inherit;
-                text-decoration: none;
-                line-height:40px;
-                    font-size: 0.55em;
+        h1 a {
+            display: block;
+            line-height: 40px;
+            font-size: 0.55em;
+        }
+    }
+    
+    .button {
+        float: right;
+
+        a {
+            &:after {
+                background-image: url("/assets/icons/bars.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                content: '';
+                display: inline-block;
+                height: 40px;
+                vertical-align: top;
+                width: 2em;
+                margin-right: 10px;
+            }
+
+            #menu-text {
+                color: #FFF;
+                line-height: 40px;
+                margin-right: 5px;
+                display: none;
+
+                @include media-query($desktop) {
+                    display: inline;
+                }
             }
         }
+
+    }   
 }
 
+#side-menu {
+    box-sizing: border-box;
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    transition: all .25s ease;
 
-#nav {
-    height: inherit;
-    line-height: inherit;
-    position: absolute;
-    right: 0;
+    $side-menu-width: 160px;
+
+    padding: 48px 32px;
+
+    width: $side-menu-width; 
+    background: rgba(200, 200, 200, 0.9);
+    padding-top: 40px;
+    z-index: 10;
+    height: 100vh;
+    position: fixed;
+    right: -($side-menu-width);
     top: 0;
-}
-
-    #nav > ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        white-space: nowrap;
+    
+    &.visible {
+        right: 0px;
     }
 
-        #nav > ul > li {
-            display: inline-block;
-            padding: 0;
-        }
+    ul {
+        margin: 0;
+        text-transform: uppercase;
+        list-style-type: none;
 
-            #nav > ul > li > a {
-                border: 0;
-                color: #fff;
-                display: block;
-                font-size: 0.8em;
-                letter-spacing: 0.225em;
-                padding: 0 1.5em;
-                text-transform: uppercase;
+        li {
+            margin-top: $spacing-unit / 4;
+            padding-top: $spacing-unit / 4;
+
+            &:not(:first-child) {
+                border-top: 1px solid #909090;
             }
 
-                #nav > ul > li > a.menuToggle {
-                    outline: 0;
-                    position: relative;
-                    line-height: 40px;
-                }
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
 
-                    #nav > ul > li > a.menuToggle:after {
-                        background-image: url("/assets/icons/bars.svg");
-                        background-position: right center;
-                        background-repeat: no-repeat;
-                        content: '';
-                        display: inline-block;
-                        height: 40px;
-                        vertical-align: top;
-                        width: 2em;
-                    }
+.row {
+    width: 100%;
+
+    .image {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .excerpt {
+        box-sizing: border-box;
+        width: 100%;
+        color: white;
+        background: rgba(200, 200, 200, 1);
+        text-align: center;
+        padding: $spacing-unit ($spacing-unit / 2);
+
+        h2 {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+
+    @include media-query($desktop) {
+        height: 300px;
+
+        .image {
+            display: block;
+            float: left;
+            width: 40%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .excerpt {
+            display: block;
+            float: left;
+            width: 60%;
+            height: 100%;
+        }
+
+        &.second .image {
+            float: right;
+        }
+    }
+}
+
+.site-footer {
+    position: relative;
+    background: #1d242a;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    height: 250px;
+
+    a {
+        color: white;
+    }
+
+    .text-holder {
+        width: 100%;
+        top: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+}
