@@ -9,4 +9,12 @@ $(function() {
             $('.my-menu').addClass('hidden');
         }
     });
+
+    $('.my-menu .button').click(function(e) {
+        e.preventDefault;
+        e.stopPropagation;
+        $('#side-menu').toggleClass('visible');
+    });
+
+    $('#title').addClass('border-drawn');
 });
