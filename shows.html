@@ -1,0 +1,34 @@
+---
+layout: regularpage
+title: Shows
+little-headerimage: /assets/images/livebona.jpg
+permalink: /shows
+---
+
+<h3> Let's put our performances here </h3>
+
+<div class="row">
+  <div class="col-10">
+    hello
+  </div>
+  <div class="col-10">
+    hello
+  </div>
+  <div class="col-10">
+    hello
+  </div>
+</div>
+
+{% for gig in site.data.gigs %}
+<div class="row">
+  <div class="col-3">
+    {{ gig.name }}
+  </div>
+  <div class="col-3">
+    {{ gig.date }}
+  </div>
+  <div class="col-3">
+    {{ gig.location }}
+  </div>
+</div>
+{% endfor %}
