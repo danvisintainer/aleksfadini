@@ -105,7 +105,11 @@ h3 {
  * Links
  */
 a {
-    color: $brand-color;
+    -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    color: inherit;
     text-decoration: none;
 
     &:visited {
@@ -114,7 +118,8 @@ a {
 
     &:hover {
         color: $text-color;
-        text-decoration: underline;
+        text-decoration: none;
+        order-bottom-color: transparent;
     }
 }
 

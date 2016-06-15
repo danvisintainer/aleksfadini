@@ -247,6 +247,65 @@
     }
 }
 
+
+
+
+
+
+
+/* trying to make a splash screen 
+
+
+
+
+    body.is-loading #banner:after {
+        opacity: 1;
+    }
+
+    #banner:after {
+        -moz-pointer-events: none;
+        -webkit-pointer-events: none;
+        -ms-pointer-events: none;
+        pointer-events: none;
+        -moz-transition: opacity 3s ease-in-out;
+        -webkit-transition: opacity 3s ease-in-out;
+        -ms-transition: opacity 3s ease-in-out;
+        transition: opacity 3s ease-in-out;
+        -moz-transition-delay: 1.25s;
+        -webkit-transition-delay: 1.25s;
+        -ms-transition-delay: 1.25s;
+        transition-delay: 1.25s; 
+        content: '';
+        background: #bbb; 
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    } 
+
+        body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+        -moz-animation: none !important;
+        -webkit-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+        -moz-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+    }  
+
+
+*/
+ 
+
+
+
+
+
+
 .big-header {
     width: 100%;
     height: 100vh;
@@ -271,16 +330,22 @@
         text-align: center;
         letter-spacing: 0.75em;
 
+        p {
+            margin: 0 0 0 0;
+            padding: 1em 0 0 0;
+        }
+    }
         #title {
             padding: 10px 0;
             
             h1 {
-                font-weight: bold;
+             padding: 0.5rem;
+             margin-bottom: 0;
             }
-
+            
             &::before,
             &::after {
-                box-sizing: border-box;
+                box-sizing: border-box; 
                 content: '';
                 position: absolute;
                 width: 0;
@@ -295,7 +360,7 @@
 
             &::after {
                 border-bottom: 5px solid transparent;
-                bottom: 0;
+                bottom: 7rem;
                 right: 0;
             }
 
@@ -307,62 +372,24 @@
                 border-bottom-color: #FFF;
                 transition: width 0.75s ease-out; // Width expands first
             }
-            
-            h1 {
-                margin-bottom: 0;
-            }
         }
-    }
-}
+/*    } */
 
-/* trying to make a splash screen */
-
-
-
-
-    body.is-loading #banner:after {
-        opacity: 1;
-    }
-
-    #banner:after {
-        -moz-pointer-events: none;
-        -webkit-pointer-events: none;
-        -ms-pointer-events: none;
-        pointer-events: none;
-        -moz-transition: opacity 3s ease-in-out;
-        -webkit-transition: opacity 3s ease-in-out;
-        -ms-transition: opacity 3s ease-in-out;
-        transition: opacity 3s ease-in-out;
-        -moz-transition-delay: 1.25s;
-        -webkit-transition-delay: 1.25s;
-        -ms-transition-delay: 1.25s;
-        transition-delay: 1.25s; 
-        content: '';
-        background: #bbb; /*It's the very first screen color, was #2e3842 */
-        display: block;
-        width: 100%;
-        height: 100%;
+    .subtitle {
         position: absolute;
+        top: 70%;
         left: 0;
-        top: 0;
-        opacity: 0;
-    } 
+        right: 0;
+        margin: auto;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+        color: #FFF;
+        text-align: center;
+        letter-spacing: 0.75em;
 
-        body.is-loading *, body.is-loading *:before, body.is-loading *:after {
-        -moz-animation: none !important;
-        -webkit-animation: none !important;
-        -ms-animation: none !important;
-        animation: none !important;
-        -moz-transition: none !important;
-        -webkit-transition: none !important;
-        -ms-transition: none !important;
-        transition: none !important;
-    }  
+    }
 
-
-
- 
-
+}
 
 
 
@@ -374,7 +401,6 @@
     width: 100%;
     height: 50vh;
     position: relative;
-
     background: linear-gradient(rgba(0, 0, 0, 0), #000);
     background-attachment: fixed;
     background-position: center;
@@ -639,15 +665,82 @@
 
 /*  <-- Footer --> */
 
+    #footer {
+        padding: 6em 0 4em 0 ;
+        background-color: #1d242a;
+        text-align: center;
+    }
 
- .copyright {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.5em;
-    letter-spacing: 0.225em;
-    list-style: none;
-    padding: 0;
-    text-transform: uppercase;
-}
+        #footer .icons {
+            font-size: 1.25em;
+        }
+
+            #footer .icons a {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+                #footer .icons a:hover {
+                    color: #fff;
+                }
+
+        #footer .copyright {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.5em; /* was 0.8, I made it smaller */
+            letter-spacing: 0.225em;
+            list-style: none;
+            padding: 0;
+            text-transform: uppercase;
+        }
+
+            #footer .copyright li {
+                border-left: solid 1px rgba(255, 255, 255, 0.5);
+                display: inline-block;
+                line-height: 1em;
+                margin-left: 1em;
+                padding-left: 1em;
+            }
+
+                #footer .copyright li:first-child {
+                    border-left: 0;
+                    margin-left: 0;
+                    padding-left: 0;
+                }
+
+                #footer .copyright li a {
+                    color: inherit;
+                }
+
+                    #footer .copyright li a:hover {
+                        color: #fff;
+                    }
+
+                @media screen and (max-width: 480px) {
+
+                    #footer .copyright li {
+                        border: 0;
+                        display: block;
+                        line-height: 1.65em;
+                        margin: 0;
+                        padding: 0.5em 0;
+                    }
+
+                }
+
+        @media screen and (max-width: 980px) {
+
+            #footer {
+                padding: 4em 3em 2em 3em ;
+            }
+
+        }
+
+        @media screen and (max-width: 736px) {
+
+            #footer {
+                padding: 3em 2em 1em 2em ;
+            }
+
+        }
 
 
 /*
