@@ -1,5 +1,8 @@
-@import url(font-awesome.min.css);
-
+/*
+*Not sure what I'm doing in the next line - so I did comment it out
+*
+*  @import url('/_sass/_font-awesome.min.scss');
+*/
 
 /**
  * Site header
@@ -602,4 +605,69 @@
         position: absolute;
         transform: translateY(-50%);
     }
+}
+
+
+
+/*
+* Icons list
+*/
+        ul.icons {
+            cursor: default;
+            list-style: none;
+            padding-left: 0;
+        }
+
+            ul.icons li {
+                display: inline-block;
+                padding: 0 1em 0 0;
+            }
+
+                ul.icons li:last-child {
+                    padding-right: 0 !important;
+                }
+
+            ul.icons.major {
+                padding: 1em 0;
+            }
+
+                ul.icons.major li {
+                    padding-right: 3.5em;
+                }
+
+
+
+/*  <-- Footer --> */
+
+
+ .copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.5em;
+    letter-spacing: 0.225em;
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+
+/*
+*  Other elements of style
+*/
+
+
+
+
+hr {
+    border: 0;
+    border-bottom: solid 2px #dfdfdf;
+    margin: 3em 0;
+}
+
+
+.wrapper5 h2, .wrapper5 h3, .wrapper5 h4, .wrapper5 h5, .wrapper5 h6 {
+    color: $wrapper-heading-color;
+}
+.wrapper5 {
+    background-color: #ffffff;
+    color: $wrapper-text-color;
 }
