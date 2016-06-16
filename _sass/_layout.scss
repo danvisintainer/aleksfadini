@@ -253,7 +253,7 @@
 
 
 
-/* trying to make a splash screen 
+
 
 
 
@@ -286,7 +286,29 @@
         opacity: 0;
     } 
 
-        body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+
+/*      body.is-loading * ,
+        body.is-loading *:before,
+        body.is-loading *:after
+                {
+
+        -moz-animation: none !important;
+        -webkit-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+        -moz-transition: none !important;
+        -webkit-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+
+
+    }  
+*/
+
+
+        body.is-loading *:before,
+        body.is-loading *:after
+        {
         -moz-animation: none !important;
         -webkit-animation: none !important;
         -ms-animation: none !important;
@@ -298,15 +320,11 @@
     }  
 
 
-*/
+
  
 
 
-
-
-
-
-.big-header {
+#banner {
     width: 100%;
     height: 100vh;
     position: relative;
@@ -318,7 +336,7 @@
 
     .title-holder {
         z-index: 10000;
-        width: 25em;
+        width: 30em;
         position: absolute;
         top: 50%;
         left: 0;
@@ -336,15 +354,19 @@
         }
     }
         #title {
+            z-index: 10000;
             padding: 10px 0;
             
             h1 {
              padding: 0.5rem;
              margin-bottom: 0;
+             font-size: 3em;
+             color: $slightly-transparent-white;
             }
             
             &::before,
             &::after {
+                    z-index: 10000;
                 box-sizing: border-box; 
                 content: '';
                 position: absolute;
@@ -353,12 +375,14 @@
             }
 
             &::before {
+                    z-index: 10000;
                 border-top: 5px solid transparent;
                 top: 0;
                 left: 0;
             }
 
             &::after {
+                    z-index: 10000;
                 border-bottom: 5px solid transparent;
                 bottom: 7rem;
                 right: 0;
@@ -366,10 +390,11 @@
 
             &.border-drawn::before,
             &.border-drawn::after {
+                    z-index: 10000;
                 width: 100%;
                 height: 100%;
-                border-top-color: #FFF;
-                border-bottom-color: #FFF;
+                border-top-color: $slightly-transparent-white;
+                border-bottom-color: $slightly-transparent-white;
                 transition: width 0.75s ease-out; // Width expands first
             }
         }
@@ -392,7 +417,17 @@
 }
 
 
+    body.is-loading #banner p {
+        -moz-transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        transform: scale(0.95);
+        opacity: 0;
+    }
 
+        body.is-loading #banner:after {
+        opacity: 1;
+    }
 
 
 

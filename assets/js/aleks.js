@@ -34,6 +34,5 @@ $(function() {
         e.stopPropagation;
         $('#side-menu').toggleClass('visible');
     });
-
-    $('#title').addClass('border-drawn');
+   $('#title').addClass('border-drawn');
 });
