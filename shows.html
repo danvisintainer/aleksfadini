@@ -5,30 +5,50 @@ little-headerimage: /assets/images/livebona.jpg
 permalink: /shows
 ---
 
-<h3> Let's put our performances here </h3>
+<div class="inner wrapper discography">
 
-<div class="row">
-  <div class="col-10">
-    hello
-  </div>
-  <div class="col-10">
-    hello
-  </div>
-  <div class="col-10">
-    hello
-  </div>
-</div>
+  <h3> Upcoming Shows </h3>
 
-{% for gig in site.data.gigs %}
-<div class="row">
-  <div class="col-3">
-    {{ gig.name }}
-  </div>
-  <div class="col-3">
-    {{ gig.date }}
-  </div>
-  <div class="col-3">
-    {{ gig.location }}
-  </div>
+  <table>
+    <tbody>
+
+      {% for gig in site.data.gigs %}
+      <tr>
+        <td>
+          {{ gig.name }}
+        </td>
+        <td>
+          {{ gig.date }}
+        </td>
+        <td>
+          {{ gig.location }}
+        </td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
+  <h3> Past Shows </h3>
+
+  <table>
+    <tbody>
+
+      {% for gig in site.data.gigs %}
+      <tr>
+        <td>
+          {{ gig.name }}
+        </td>
+        <td>
+          {{ gig.date }}
+        </td>
+        <td>
+          {{ gig.location }}
+        </td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+
 </div>
-{% endfor %}

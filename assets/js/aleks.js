@@ -16,6 +16,35 @@ $(function() {
         }, 1000);
       });
 
+// adding the button a little later
+              $window.on('load', function() {
+        window.setTimeout(function() {
+          $('#subt').removeClass('invisiblestart1');
+          $('#subt').addClass('visiblestart1');
+        }, 1500);
+      });
+
+// adding the button a little later
+              $window.on('load', function() {
+        window.setTimeout(function() {
+          $('#newsbits').removeClass('invisiblestart2');
+          $('#newsbits').addClass('visiblestart2');
+          $('#morearrow').removeClass('beforearrow');
+          $('#morearrow').addClass('arrowcomesin');
+        }, 2500);
+      });
+// scroll down when clicking on "more"
+
+$('#morearrow').click(function() {
+   //optionally remove the 500 (which is time in milliseconds) of the
+   //scrolling animation to remove the animation and make it instant
+  $('html,body').animate({
+        scrollTop: $(".second").offset().top},
+        'slow');
+});
+
+// menutop appearing when scrolling down
+
     $(window).scroll(function(){
         if ($(window).scrollTop() > $bottomOfHeader) {
             $('.my-menu').removeClass('hidden');
@@ -24,10 +53,15 @@ $(function() {
         }
     });
 
+// hamburger menu
+
     $('.my-menu .button').click(function(e) {
         e.preventDefault;
         e.stopPropagation;
         $('#side-menu').toggleClass('visible');
     });
+
+//border effect on title
    $('#title').addClass('border-drawn');
 });
+
