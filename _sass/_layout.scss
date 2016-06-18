@@ -785,6 +785,7 @@ opacity:1;
 * Icons list
 */
         ul.icons {
+            margin-left: 0;
             cursor: default;
             list-style: none;
             padding-left: 0;
@@ -968,6 +969,7 @@ hr {
 
 
 .inner.wrapper {
+    max-width: 800px;
     text-align: center;
 
     .bio p{
@@ -980,12 +982,12 @@ hr {
 
     h2 {
 
-        font-size: 1.2em;
+    font-size: 1.2em;
     line-height: 1.4em;
     margin-top:1.5em;
 
     @include media-query($on-palm) {
-        font-size: 1.3em;
+        font-size: 1.5em;
     line-height: 1.75em;
     margin-top:2em;
         }
@@ -1046,7 +1048,6 @@ hr {
 
         .discimg img{
         float: left;
-        margin: 0 2em 2em 0;
         top: 0.25em;    
         display: block;
         border-radius: 3px;
@@ -1240,10 +1241,14 @@ a {
         padding: 1em;
         magin: 1em;
         h2 {
+            margin-top: 1em;
             font-size: 1.5em;
             text-transform: uppercase;
             color: $wrapper-heading-color;
-            letter-spacing: 1em;
+            letter-spacing: 0.2em; 
+            @include media-query($on-palm) {
+                letter-spacing: 1em;             
+            }
         }
 
         h3 {
@@ -1376,3 +1381,4 @@ a {
         text-decoration: none;
     }
 }
+
