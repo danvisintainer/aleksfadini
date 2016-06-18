@@ -1,21 +1,24 @@
 - albumtitle: Peace EP
   artist: Alessandro Fadini Trio 
-  personnel: 
-    piano: Alessandro Fadini
-    bass: Dan Martinez
-    drums: Jesse Simpson
+  personnel:
+    - name: Allessandro Fadini
+      axe: Piano
+    - name: Dan Martinez
+      axe: Bass
+    - name: Jesse Simpson
+      axe: Drums
   albumimg: record01.jpg
   songs: 
-    track: 
-      title: Peace
-      play: yes
+    - title: Peace
+      play: true
       src: trioEP/peace.mp3
-    track:
-      title: Meditation
-      play: yes
+    - title: Meditation
+      play: true
       src: trioEP/meditation.mp3
-    track:
-      title: I Remeber You
-      play: yes
+    - title: I Remeber You
+      play: true
       src: trioEP/irememberyou.mp3
-
+    - title: Fuckballs
+      play: false
+      src: trioEP/irememberyou.mp3
+      

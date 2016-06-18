@@ -10,95 +10,39 @@ permalink: /music
       
       <hr/>
       <div id="audiogallery">
-        <div class="albumtitle">
-          <h2>"Peace EP"</h2>
-          <h3>Alessandro Fadini Trio</h3>
-          <div class="album">
-
-              <div class="personnel">
-                <p> Alessandro Fadini, piano <br>
-                Dan Martinez, bass <br>
-                Jesse Simpson, drums <br></p>
-              <img src="/assets/images/record01.jpg" width="200" alt="Peace EP">
-              </div>
-
-              <div class="songs">
-                  <p> "Meditation" </p>
-                <div class="mp3player">
-
-                  <audio controls>
-                    <source src="assets/music/trioEP/meditation.mp3" type="audio/mp3">
-                  </audio>
-                </div>
-                  <p> "Peace" </p>
-                <div class="mp3player">
-
-                  <audio controls>
-                    <source src="assets/music/trioEP/peace.mp3" type="audio/mp3">
-                  </audio>
-                </div>
-                                  <p> "I Remember You" </p>
-                <div class="mp3player">
-
-                  <audio controls>
-                    <source src="assets/music/trioEP/irememberyou.mp3" type="audio/mp3">
-                  </audio>
-                </div>
-
-              </div>
-
-          </div>
-
-        </div>
-<!-- I tried to automatize here
-        <hr/>
 
       {% for record in site.data.listen %}
 
-              <div class="albumtitle">
+          <div class="albumtitle">
           <h2>"{{ record.albumtitle }}"</h2>
           <h3>{{ record.artist }}</h3>
-          <div class="album">
+            <div class="album">
 
-              <div class="personnel">
-                <p>
-
-                      {% for musician in site.data.listen.record.personnel %}
-
-                {{ musician.personnel }}, piano <br>
-                Dan Martinez, bass <br>
-                Jesse Simpson, drums <br>
-
-                      {% endfor %}
-                </p>
-              <img src="/assets/images/record01.jpg" width="200" alt="Peace EP">
-              </div>
-
-              <div class="songs">
-                  <p> "Meditation" </p>
-                <div class="mp3player">
-
-                  <audio controls>
-                    <source src="assets/music/trioEP/meditation.mp3" type="audio/mp3">
-                  </audio>
-                </div>
-                  <p> "Peace" </p>
-                <div class="mp3player">
-
-                  <audio controls>
-                    <source src="assets/music/trioEP/peace.mp3" type="audio/mp3">
-                  </audio>
+                <div class="personnel">
+                  <p>
+                    {% for musician in record.personnel %}
+                      {{ musician.name }} on {{ musician.axe }} <br>
+                    {% endfor %}
+                  </p>
+                <img src="/assets/images/{{ record.albumimg }}" width="200" alt="Peace EP">
                 </div>
 
-              </div>
-
+                <div class="songs">
+                  {% for song in record.songs %}
+                    {% if song.play %}
+                      <p>"{{ song.title }}"</p>
+                      <div class="mp3player">
+                        <audio controls>
+                          <source src="assets/music/{{ song.src }}">
+                        </audio>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
           </div>
-        </div>
-          <hr/>
+        <hr />
       {% endfor %}
-!-->
-
-  <hr />
 
   <h3>Soundcloud</h3>
   <p>You can listen to some other excerpts on Soundcloud: </p><p><a href="https://soundcloud.com/alessandro-fadini" class="icon fa-soundcloud"><span class="label">Soundcloud</span></a></p>
