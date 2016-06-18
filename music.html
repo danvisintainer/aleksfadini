@@ -1,16 +1,110 @@
 ---
-layout: regularpage
+layout: mediapage
 title: Listen
 little-headerimage: /assets/images/piano.jpg
 permalink: /music
 ---
 <div class="inner wrapper">
-  <h3>Alessandro's Music</h3>
-  <p>Here are some excerpts of available only on this website:</p>
+  <h2>Alessandro's Music</h2>
+  <p>Here are some excerpts available only on this website:</p>
+      
+      <hr/>
+      <div id="audiogallery">
+        <div class="albumtitle">
+          <h2>"Peace EP"</h2>
+          <h3>Alessandro Fadini Trio</h3>
+          <div class="album">
 
+              <div class="personnel">
+                <p> Alessandro Fadini, piano <br>
+                Dan Martinez, bass <br>
+                Jesse Simpson, drums <br></p>
+              <img src="/assets/images/record01.jpg" width="200" alt="Peace EP">
+              </div>
+
+              <div class="songs">
+                  <p> "Meditation" </p>
+                <div class="mp3player">
+
+                  <audio controls>
+                    <source src="assets/music/trioEP/meditation.mp3" type="audio/mp3">
+                  </audio>
+                </div>
+                  <p> "Peace" </p>
+                <div class="mp3player">
+
+                  <audio controls>
+                    <source src="assets/music/trioEP/peace.mp3" type="audio/mp3">
+                  </audio>
+                </div>
+                                  <p> "I Remember You" </p>
+                <div class="mp3player">
+
+                  <audio controls>
+                    <source src="assets/music/trioEP/irememberyou.mp3" type="audio/mp3">
+                  </audio>
+                </div>
+
+              </div>
+
+          </div>
+
+        </div>
+<!-- I tried to automatize here
+        <hr/>
+
+      {% for record in site.data.listen %}
+
+              <div class="albumtitle">
+          <h2>"{{ record.albumtitle }}"</h2>
+          <h3>{{ record.artist }}</h3>
+          <div class="album">
+
+              <div class="personnel">
+                <p>
+
+                      {% for musician in site.data.listen.record.personnel %}
+
+                {{ musician.personnel }}, piano <br>
+                Dan Martinez, bass <br>
+                Jesse Simpson, drums <br>
+
+                      {% endfor %}
+                </p>
+              <img src="/assets/images/record01.jpg" width="200" alt="Peace EP">
+              </div>
+
+              <div class="songs">
+                  <p> "Meditation" </p>
+                <div class="mp3player">
+
+                  <audio controls>
+                    <source src="assets/music/trioEP/meditation.mp3" type="audio/mp3">
+                  </audio>
+                </div>
+                  <p> "Peace" </p>
+                <div class="mp3player">
+
+                  <audio controls>
+                    <source src="assets/music/trioEP/peace.mp3" type="audio/mp3">
+                  </audio>
+                </div>
+
+              </div>
+
+          </div>
+        </div>
+          <hr/>
+      {% endfor %}
+!-->
 
   <hr />
 
   <h3>Soundcloud</h3>
   <p>Aleks Soundcloud: <a href="https://twitter.com/afadini" class="icon fa-soundcloud"><span class="label">Soundcloud</span></a></p>
+
+      
+
+
+
 </div>
