@@ -731,7 +731,7 @@ opacity:1;
 
 
     @include media-query($desktop) {
-        height: 300px;
+        height: 340px;
 
         .image {
             display: block;
@@ -1341,7 +1341,7 @@ a {
     -webkit-flex-direction: row;
     flex-direction: column;
     @include media-query($on-palm) {
-    flex-direction: row;
+        flex-direction: row;
     }
        .small-video {
         -webkit-flex: auto;
@@ -1350,3 +1350,29 @@ a {
 
 }
 
+
+.recordplatforms {
+    width: 70%;
+    margin: auto;
+    padding: 1em;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: column;
+    @include media-query($on-palm) {
+        flex-direction: row;
+    }
+    img {
+        -webkit-flex: auto;
+        flex: auto;
+        max-width: 5em;
+        max-height: 2em;
+    }
+    a {
+        margin-top: 5px;
+        -webkit-flex: auto;
+        flex: auto;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
