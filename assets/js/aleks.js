@@ -1,8 +1,8 @@
 $(function() {
     var $bigHeader=$('.big-header'),
         $littleHeader=$('.little-header'),
-        $headerDiv = $bigHeader.outerHeight(true) || $littleHeader.outerHeight(true);
-        $bottomOfHeader = $headerDiv - 100;
+            $headerDiv = $bigHeader.outerHeight(true) || $littleHeader.outerHeight(true);
+        $bottomOfHeader = $headerDiv;
 
     console.log($headerDiv);
 // trying to make a splash screen
@@ -44,8 +44,13 @@ $('#morearrow').click(function() {
 });
 
 // menutop appearing when scrolling down
+    $(window).resize(function() {
+            $headerDiv = $bigHeader.outerHeight(true) || $littleHeader.outerHeight(true);
+        $bottomOfHeader = $headerDiv;
+    });
 
     $(window).scroll(function(){
+
         if ($(window).scrollTop() > $bottomOfHeader) {
             $('.my-menu').removeClass('hidden');
         } else {
