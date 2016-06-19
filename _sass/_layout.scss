@@ -933,12 +933,15 @@ opacity:1;
         ul.icons {
             cursor: default;
             list-style: none;
-            margin: 1em 30% 1em 30%;
+            margin: auto;
+            &.likebutton {
+                margin: 1em 30% 1em 30%;    
+            }
         }
 
             ul.icons li {
                 display: inline-block;
-                padding: 0 1em 0 0;
+                margin: 0.5em;
             }
 
                 ul.icons li:last-child {
@@ -958,7 +961,7 @@ opacity:1;
 /*  <-- Footer --> */
 
     #footer {
-        padding: 6em 0 4em 0 ;
+        margin: auto;
         background-color: #1d242a;
         text-align: center;
     }
@@ -981,6 +984,7 @@ opacity:1;
             letter-spacing: 0.225em;
             list-style: none;
             padding: 0;
+            margin: auto;
             text-transform: uppercase;
         }
 
@@ -988,8 +992,6 @@ opacity:1;
                 border-left: solid 1px rgba(255, 255, 255, 0.5);
                 display: inline-block;
                 line-height: 1em;
-                margin-left: 1em;
-                padding-left: 1em;
             }
 
                 #footer .copyright li:first-child {
