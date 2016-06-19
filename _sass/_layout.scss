@@ -817,6 +817,9 @@ opacity:1;
         flex: auto;
         box-sizing: border-box;
         width: 100%;
+                @include media-query($desktop) {
+        width: 60%;
+    }
         color: white;
         background: rgba(220, 220, 220, 1);
         text-align: center;
@@ -861,6 +864,10 @@ opacity:1;
         flex: auto;
         box-sizing: border-box;
         width: 100%;
+        @include media-query($desktop) {
+        width: 60%;
+    }
+
         color: white;
         background: rgba(200, 200, 200, 1);
         text-align: center;
