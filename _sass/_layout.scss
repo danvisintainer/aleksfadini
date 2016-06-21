@@ -796,7 +796,6 @@ opacity:1;
 *****/
 
 .first {
-
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
@@ -821,13 +820,14 @@ opacity:1;
         width: 60%;
     }
         color: white;
-        background: rgba(220, 220, 220, 1);
+        background: rgba(200, 200, 200, 1);
         text-align: center;
         padding: $spacing-unit ($spacing-unit / 2);
 
 
 
         h2 {
+            text-shadow: 0px 0px 8px #040404;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: bold;
@@ -843,7 +843,6 @@ opacity:1;
 }
 
 .second {
-
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
@@ -869,14 +868,14 @@ opacity:1;
     }
 
         color: white;
-        background: rgba(200, 200, 200, 1);
         text-align: center;
         padding: $spacing-unit ($spacing-unit / 2);
-        background: rgb(200, 200, 200);
+        background: rgba(150, 150, 150, 1);
 
 
 
         h2 {
+            text-shadow: 0px 0px 8px #040404;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: bold;
@@ -928,7 +927,9 @@ opacity:1;
     background-image: url("/assets/images/lookoflovew.jpg");
 }
 
-
+.first, .second {
+                text-shadow: 0px 0px 2px #040404;
+}
 
 
 .site-footer {
@@ -1566,6 +1567,20 @@ a {
         flex-direction: row;
     }
     img {
+        -webkit-filter: drop-shadow(0px 0px 2px #222);
+        filter:         drop-shadow(0px 0px 2px #222); 
+        -webkit-flex: auto;
+        flex: auto;
+        max-width: 5em;
+        max-height: 2em;
+    }
+
+        img:hover {
+        -webkit-transition:1s;
+        -moz-transition:1s;
+        transition:1s;
+        -webkit-filter: drop-shadow(0px 10px 10px #000);
+        filter:         drop-shadow(0px 10px 10px #000); 
         -webkit-flex: auto;
         flex: auto;
         max-width: 5em;
