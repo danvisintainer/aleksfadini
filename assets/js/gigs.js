@@ -219,7 +219,13 @@ var $clock = $('<div id="clockdiv"> Days: <span class="days"></span><br> Hours: 
         $tempCountDownDiv[i] = $( "<div class='countdown'>"+ i +"  <h3> Countdown </h3> </div>" );
 
         console.log(        "$tempCountDownDiv[i]",$tempCountDownDiv[i]);
-        $($gigRows[i]).append( $tempCountDownDiv[i] ); 
+        // $($gigRows[i]).append( $tempCountDownDiv[i] );  
+        var $gigRowfirstchild= $(":nth-child(1)", $($gigRows[i]));
+          $($gigRowfirstchild).append( $tempCountDownDiv[i] );  
+          var $clockTime = getTimeRemaining(gigDate($gigArray[i]));
+           var $clock = $('<div id="clockdiv'+i+'"> Days: <span class="days">'+ $clockTime.days +'</span><br> Hours: <span class="hours">'+ $clockTime.hours +'</span><br> Minutes: <span class="minutes">'+ $clockTime.hours +' </span><br> Seconds: <span class="seconds">'+ $clockTime.seconds +'</span> </div>');
+           $tempCountDownDiv[i].append($clock);
+
         $tempCountDownDiv[i].hide();
       $numberoffuturegigs = ($numberoffuturegigs + 1);
     }
@@ -270,8 +276,8 @@ setInterval(function(){
         if($gigRowsi.is(":hover")) {
            $tempCountDownDiv[i].fadeIn();
            var $clockTime = getTimeRemaining(gigDate($gigArray[i]));
-           var $clock = $('<div id="clockdiv"> Days: <span class="days">'+ $clockTime.days +'</span><br> Hours: <span class="hours"></span><br> Minutes: <span class="minutes"></span><br> Seconds: <span class="seconds"></span> </div>');
-           $tempCountDownDiv[i].append($clock);
+           var $clock = $('<div id="clockdiv'+i+'"> Days: <span class="days">'+ $clockTime.days +'</span><br> Hours: <span class="hours">'+ $clockTime.hours +'</span><br> Minutes: <span class="minutes">'+ $clockTime.hours +' </span><br> Seconds: <span class="seconds">'+ $clockTime.seconds +'</span> </div>');
+           $tempCountDownDiv[i].html($clock);
            console.log("$clockTime",$clockTime);
         }
         else {
