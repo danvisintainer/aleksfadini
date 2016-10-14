@@ -1,0 +1,16 @@
+- name: Tiffany Lauren Mason YouTube Channel
+  description: Lifestyle and Wellness
+  genre: Electronic Jazz / Smoooth R&B
+  youtubeimg: tlm.jpg
+  youtubelink: https://www.youtube.com/channel/UCces6wPdrOtgx0H12yOfVlw
+  songs: 
+  - title: Venice Trip
+    play: true
+    src: electronic/tiffanyvenice.mp3
+  - title: Black Lemonade
+    play: true
+    src: electronic/blacklemonade.mp3
+  - title: Fermi Paradox
+    play: true
+    src: electronic/fermiparadox.mp3
+  videolink: https://www.youtube.com/embed/l9FD_K3k8AA

@@ -1,0 +1,49 @@
+- name: Resynch
+  description: Indie - Old School RPG (under development)
+  genre: Chip Music / Retro / Indie / Experimental
+  gameimg: resynch.gif
+  gamelink: https://itsalljustaprogram.com/
+  showlink: true 
+  songs:
+  - title: City Dweller
+    play: true
+    src: electronic/citydweller.mp3
+  - title: Killer On The Loose
+    play: true
+    src: electronic/killerontheloose.mp3 
+  - title: Urban Mist
+    play: true
+    src: electronic/urbanmist.mp3
+  videolink: https://www.youtube.com/embed/bMbG6qd4ebk
+  showvideo: true
+- name: Dragons Of Might (imaginary title)
+  description: Fantasy RPG
+  genre: Fantasy / Epic / Medieval
+  gameimg: dragons.jpg
+  gamelink: 
+  showlink: false 
+  songs:
+  - title: Epic Chant
+    play: true
+    src: electronic/epicchant.mp3
+  videolink:
+  showvideo: false
+- name: Destination Orion (imaginary title)
+  description: Space Sim
+  genre: Sci-Fi / Electronic / Atmospheric
+  gameimg: space.jpg
+  gamelink:
+  showlink: false 
+  songs:
+  - title: ETA Orion
+    play: true
+    src: electronic/ETAOrion.mp3
+  - title: Energy Channel
+    play: true
+    src: electronic/EnergyChannel.mp3
+  - title: Commute To Mars
+    play: true
+    src: electronic/CommuteToMars.mp3
+  videolink:
+  showvideo: false
+      

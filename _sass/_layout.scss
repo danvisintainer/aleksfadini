@@ -1563,11 +1563,12 @@ a {
     @include media-query($on-palm) {
         width: 300px;
         height: 167px;
-        margin: 1em;
+        margin: 1em auto;
     }
         @include media-query($desktop) {
         width: 400px;
         height: 200px;
+        margin: auto;
     }
 
 }

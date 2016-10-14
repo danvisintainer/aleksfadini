@@ -1,34 +1,44 @@
 ---
 layout: mediapage
-title: Electronic / Videogame Music
+title: Electronic Music Portfolio
 little-headerimage: /assets/images/pixelated.jpg
 permalink: /electronic
 ---
 <div class="inner wrapper">
-  <h2>Alessandro's Music</h2>
-  <p>Here are some excerpts available only on this website:</p>
+
+
+  <h2>Videogame Music</h2>
+  <p>I love working on the videogame soundtrack and songs. Here are some projects I collaborated with and some other excerpts:</p>
       
-      <hr/>
+     <hr/>
       <div id="audiogallery">
 
-      {% for record in site.data.listen %}
+      {% for game in site.data.videogame %}
 
           <div class="albumtitle">
-          <h2>"{{ record.albumtitle }}"</h2>
-          <h3>{{ record.artist }}</h3>
+          <h3>"{{ game.name }}"</h3>
+          <p> <b>Game Description: </b>{{ game.description }}</p>
+          <p> <b>Music Genre: </b>{{ game.genre }}</p>
+
             <div class="album">
 
                 <div class="personnel">
-                  <p>
-                    {% for musician in record.personnel %}
-                      {{ musician.name }} on {{ musician.axe }} <br>
-                    {% endfor %}
-                  </p>
-                <img src="/assets/images/{{ record.albumimg }}" width="200" alt="Peace EP">
+                  {% if game.showlink %}
+                        <p>
+                            Check out the <a href="{{ game.gamelink }}"> Game Website </a>
+                        </p>
+                        <a href="{{ game.gamelink }}">
+                              <img src="/assets/images/{{ game.gameimg }}" width="200" alt="{{ game.gameimg }}">
+                        </a>
+                  {% else %}
+                              <img src="/assets/images/{{ game.gameimg }}" width="200" alt="{{ game.gameimg }}">
+
+                  {% endif %}    
+
                 </div>
 
                 <div class="songs">
-                  {% for song in record.songs %}
+                  {% for song in game.songs %}
                     {% if song.play %}
                       <p>"{{ song.title }}"</p>
                       <div class="mp3player">
@@ -40,14 +50,65 @@ permalink: /electronic
                   {% endfor %}
                 </div>
             </div>
+                {% if game.showvideo %}
+                          <p> Watch one of the videos:</p>
+                          <div class="small-video">
+                            <iframe width="100%"" height="100%"  src="{{ game.videolink }}" frameborder="0" allowfullscreen></iframe>
+                          </div>
+                {% endif %}
           </div>
         <hr />
       {% endfor %}
 
-  <h3>Soundcloud</h3>
-  <p>You can listen to other excerpts on Soundcloud: </p><p><div class="likebutton"><a href="https://soundcloud.com/alessandro-fadini" class="icon fa-soundcloud"><span class="label">Take me to Soundcloud</span><p>Take me to Soundcloud</p></a></div></p>
 
-  <hr/>
+
+  <h2>YouTube Scoring</h2>
+  <p>I like to create music on demand to meet the specific needs of a YouTube Creator. Here are some examples of music I created on commission for YouTube collaborations:</p>
+      
+      <hr/>
+      <div id="audiogallery">
+
+      {% for channel in site.data.youtube %}
+
+          <div class="albumtitle">
+          <h3>"{{ channel.name }}"</h3>
+          <p> <b>Channel Description: </b>{{ channel.description }}</p>
+          <p> <b>Music Genre: </b>{{ channel.genre }}</p>
+
+            <div class="album">
+
+                <div class="personnel">
+                  <p>
+                      Check out the <a href="{{ channel.youtubelink }}"> Youtube Channel </a>
+                  </p>
+                  <a href="{{ channel.youtubelink }}">
+                        <img src="/assets/images/{{ channel.youtubeimg }}" width="200" alt="{{ channel.youtubeimg }}">
+                  </a>
+
+                </div>
+
+                <div class="songs">
+                  {% for song in channel.songs %}
+                    {% if song.play %}
+                      <p>"{{ song.title }}"</p>
+                      <div class="mp3player">
+                        <audio controls>
+                          <source src="assets/music/{{ song.src }}">
+                        </audio>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+                                      <p> Watch one of the videos:</p>
+                          <div class="small-video">
+                            <iframe width="100%"" height="100%"  src="{{ channel.videolink }}" frameborder="0" allowfullscreen></iframe>
+                          </div>
+          </div>
+        <hr />
+      {% endfor %}
+
+
 
       
 
