@@ -115,7 +115,40 @@
     }
 }
 
+/**
+ * little-header
+ */
 
+ #quotes li {
+    list-style-type: none; 
+    text-align: center; 
+    padding: 0 2% 0.7em;
+    font-size: 0.9em;
+    text-transform: none;
+    }
+#quotes ul {
+    padding-top: 2em;
+       margin-top: 4em;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    letter-spacing: 0.15em;
+
+    list-style-type: none; 
+    text-align: center; 
+    padding: 0 2% 0.7em;
+    font-size: 0.9em;
+    text-transform: none;
+}
+
+#quotes li {
+    font-style: italic;
+    text-transform: none;
+display: none;}
+
+#quotes li span {
+    font-style: normal;
+    }
 
 /**
  * Site footer
