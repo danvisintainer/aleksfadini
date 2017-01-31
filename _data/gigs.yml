@@ -1,12 +1,22 @@
 - date: 02/25/2017
   time: "18:00"
   name: Aleks Fadini Quartet
-  location: Silvana's, Harlem, NYC
+  location: Shrine, Harlem, NYC
 
 - date: 02/24/2017
   time: "19:00"
   name: Aleks Fadini Quartet
   location: Club Bonafide, Manhattan, NYC
+
+- date: 01/15/2017
+  time: "21:00"
+  name: Josiah Boornazian Quartet
+  location: Cafe Vivaldi, NYC
+
+- date: 01/11/2017
+  time: "18:00"
+  name: Josiah Boornazian Quartet
+  location: Silvana's, Harlem, NYC
 
 - date: 11/20/2016
   time: "18:00"

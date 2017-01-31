@@ -1,3 +1,17 @@
+- name: Isaac Arthur YouTube Channel
+  description: Science And Futurism
+  genre: Ambient / Sci-Fi Soundtrack
+  youtubeimg: isaac.jpg
+  youtubelink: https://www.youtube.com/channel/UCZFipeZtQM5CKUjx6grh54g
+  songs: 
+  - title: First Contact
+    play: true
+    src: electronic/FirstContact.mp3
+  - title: Energy Channel
+    play: true
+    src: electronic/EnergyChannel.mp3
+  videolink: https://www.youtube.com/embed/igZi4iyJiq0
+
 - name: Tiffany Lauren Mason YouTube Channel
   description: Lifestyle and Wellness
   genre: Electronic Jazz / Smoooth R&B
@@ -14,3 +28,4 @@
     play: true
     src: electronic/fermiparadox.mp3
   videolink: https://www.youtube.com/embed/l9FD_K3k8AA
+
